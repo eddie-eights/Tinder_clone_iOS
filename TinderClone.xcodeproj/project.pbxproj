@@ -13,6 +13,7 @@
 		AF9136A92AECA2E300599359 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9136A82AECA2E300599359 /* Preview Assets.xcassets */; };
 		AF9136B72AED42DD00599359 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B62AED42DD00599359 /* User.swift */; };
 		AF9136B92AED454A00599359 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B82AED454A00599359 /* Card.swift */; };
+		AF9136BB2AED4D7300599359 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136BA2AED4D7300599359 /* SwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AF9136A82AECA2E300599359 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9136B62AED42DD00599359 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF9136B82AED454A00599359 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AF9136BA2AED4D7300599359 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		AF9136AF2AED3C1E00599359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF9136BA2AED4D7300599359 /* SwipeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				AF9136A22AECA2E200599359 /* TinderCloneApp.swift in Sources */,
 				AF9136B72AED42DD00599359 /* User.swift in Sources */,
 				AF9136B92AED454A00599359 /* Card.swift in Sources */,
+				AF9136BB2AED4D7300599359 /* SwipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
