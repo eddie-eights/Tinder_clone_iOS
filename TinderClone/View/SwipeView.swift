@@ -71,11 +71,63 @@ struct CardView: View {
                     .foregroundColor(.white)
                 }
                 .padding()
+                
+                // ドラッグした時の Nope / Like ラベル
+                HStack{
+                    Image("like")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                        .opacity(Double(card.x / 10 - 1))
+                    Spacer()
+                    Image("nope")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                        .opacity(Double(card.x / 10 * -1 - 1))
+                }
             }
             .background(.black)
             .cornerRadius(16)
             .padding(8)
-            
+            // ドラックアニメーションを設定
+            .offset(x: card.x, y: card.y)
+            .rotationEffect(.init(degrees: card.degree))
+            .gesture(
+                DragGesture()
+                    .onChanged({ value in
+                        withAnimation(.default) {
+                            card.x = value.translation.width
+                            card.y = value.translation.height
+                            card.degree = 7 * (value.translation.width > 0 ? 1 : -1 )
+                        }
+                        withAnimation(
+                            .interpolatingSpring(
+                                mass: 1, stiffness: 50, damping: 5, initialVelocity: 0)
+                        ) {
+                            // ドラッグしている場所に応じたスプリングアニメーションの処理
+                            switch value.translation.width {
+                            case 0...100:
+                                card.x = 0
+                                card.y = 0
+                                card.degree = 0
+                            case let x where x > 100:
+                                card.x = 1000
+                                card.degree = 12
+                            case (-100)...(-1):
+                                card.x = 0
+                                card.y = 0
+                                card.degree = 0
+                            case let x where x < -100:
+                                card.x = -1000
+                                card.degree = -12
+                            default:
+                                card.x = 0
+                                card.y = 0
+                            }
+                        }
+                    })
+            )
             
             // Nope / Like ボタン
             HStack{
@@ -83,7 +135,14 @@ struct CardView: View {
                 
                 // Nopeボタン
                 Button{
-                    
+                    withAnimation(
+                        .interpolatingSpring(
+                            mass: 1, stiffness: 50, damping: 5, initialVelocity: 0
+                        )
+                    ){
+                        card.x = -1000
+                        card.degree = -12
+                    }
                 }label: {
                     Image("dismiss_circle")
                         .resizable()
@@ -95,7 +154,14 @@ struct CardView: View {
                 
                 // Likeボタン
                 Button{
-                    
+                    withAnimation(
+                        .interpolatingSpring(
+                            mass: 1, stiffness: 50, damping: 5, initialVelocity: 0
+                        )
+                    ){
+                        card.x = 1000
+                        card.degree = 12
+                    }
                 }label: {
                     Image("like_circle")
                         .resizable()

@@ -14,6 +14,7 @@
 		AF9136B72AED42DD00599359 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B62AED42DD00599359 /* User.swift */; };
 		AF9136B92AED454A00599359 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B82AED454A00599359 /* Card.swift */; };
 		AF9136BB2AED4D7300599359 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136BA2AED4D7300599359 /* SwipeView.swift */; };
+		AF9136BD2AEE320800599359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9136BC2AEE320800599359 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		AF9136B62AED42DD00599359 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF9136B82AED454A00599359 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF9136BA2AED4D7300599359 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		AF9136BC2AEE320800599359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		AF9136952AECA2E200599359 = {
 			isa = PBXGroup;
 			children = (
+				AF9136BC2AEE320800599359 /* GoogleService-Info.plist */,
 				AF9136A02AECA2E200599359 /* TinderClone */,
 				AF91369F2AECA2E200599359 /* Products */,
 			);
@@ -73,7 +76,6 @@
 		AF9136A72AECA2E300599359 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AF9136B02AED3C2200599359 /* New Group */,
 				AF9136A82AECA2E300599359 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -85,14 +87,6 @@
 				AF9136BA2AED4D7300599359 /* SwipeView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AF9136B02AED3C2200599359 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			path = "../New Group/New Group";
 			sourceTree = "<group>";
 		};
 		AF9136B12AED3C3100599359 /* ViewModel */ = {
@@ -185,6 +179,7 @@
 			files = (
 				AF9136A92AECA2E300599359 /* Preview Assets.xcassets in Resources */,
 				AF9136A62AECA2E300599359 /* Assets.xcassets in Resources */,
+				AF9136BD2AEE320800599359 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
