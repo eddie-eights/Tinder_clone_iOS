@@ -14,7 +14,6 @@
 		AF9136B72AED42DD00599359 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B62AED42DD00599359 /* User.swift */; };
 		AF9136B92AED454A00599359 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136B82AED454A00599359 /* Card.swift */; };
 		AF9136BB2AED4D7300599359 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9136BA2AED4D7300599359 /* SwipeView.swift */; };
-		AF9136BD2AEE320800599359 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9136BC2AEE320800599359 /* GoogleService-Info.plist */; };
 		AF9136C02AEE38A800599359 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136BF2AEE38A800599359 /* FirebaseAnalytics */; };
 		AF9136C22AEE38A800599359 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136C12AEE38A800599359 /* FirebaseAnalyticsOnDeviceConversion */; };
 		AF9136C42AEE38A800599359 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136C32AEE38A800599359 /* FirebaseAnalyticsSwift */; };
@@ -42,6 +41,14 @@
 		AF9136F02AEE38A800599359 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136EF2AEE38A800599359 /* FirebaseRemoteConfigSwift */; };
 		AF9136F22AEE38A800599359 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136F12AEE38A800599359 /* FirebaseStorage */; };
 		AF9136F42AEE38A800599359 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = AF9136F32AEE38A800599359 /* FirebaseStorageCombine-Community */; };
+		AFDA0AFB2AEE3FCA00A8CD2A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0AFA2AEE3FCA00A8CD2A /* LoginView.swift */; };
+		AFDA0AFD2AEE3FDE00A8CD2A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0AFC2AEE3FDE00A8CD2A /* RegisterView.swift */; };
+		AFDA0AFF2AEE405900A8CD2A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0AFE2AEE405900A8CD2A /* AuthViewModel.swift */; };
+		AFDA0B012AEE406600A8CD2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B002AEE406600A8CD2A /* AuthService.swift */; };
+		AFDA0B032AEE427A00A8CD2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFDA0B022AEE427A00A8CD2A /* GoogleService-Info.plist */; };
+		AFDA0B052AEE455600A8CD2A /* BrandingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */; };
+		AFDA0B072AEE485D00A8CD2A /* TinderInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */; };
+		AFDA0B092AEE6B4B00A8CD2A /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +60,14 @@
 		AF9136B62AED42DD00599359 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF9136B82AED454A00599359 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AF9136BA2AED4D7300599359 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
-		AF9136BC2AEE320800599359 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFDA0AFA2AEE3FCA00A8CD2A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AFDA0AFC2AEE3FDE00A8CD2A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AFDA0AFE2AEE405900A8CD2A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		AFDA0B002AEE406600A8CD2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AFDA0B022AEE427A00A8CD2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandingImage.swift; sourceTree = "<group>"; };
+		AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderInputField.swift; sourceTree = "<group>"; };
+		AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,6 @@
 		AF9136952AECA2E200599359 = {
 			isa = PBXGroup;
 			children = (
-				AF9136BC2AEE320800599359 /* GoogleService-Info.plist */,
 				AF9136A02AECA2E200599359 /* TinderClone */,
 				AF91369F2AECA2E200599359 /* Products */,
 			);
@@ -114,13 +127,14 @@
 		AF9136A02AECA2E200599359 /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA0B022AEE427A00A8CD2A /* GoogleService-Info.plist */,
+				AF9136A12AECA2E200599359 /* TinderCloneApp.swift */,
+				AF9136A32AECA2E200599359 /* ContentView.swift */,
 				AF9136B42AED3CE700599359 /* Util */,
-				AF9136B52AED3CFA00599359 /* Serivice */,
+				AF9136B52AED3CFA00599359 /* Service */,
 				AF9136B12AED3C3100599359 /* ViewModel */,
 				AF9136AF2AED3C1E00599359 /* View */,
 				AF9136B22AED3C9700599359 /* Model */,
-				AF9136A12AECA2E200599359 /* TinderCloneApp.swift */,
-				AF9136A32AECA2E200599359 /* ContentView.swift */,
 				AF9136A52AECA2E300599359 /* Assets.xcassets */,
 				AF9136A72AECA2E300599359 /* Preview Content */,
 			);
@@ -138,6 +152,7 @@
 		AF9136AF2AED3C1E00599359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA0AF92AEE3FBD00A8CD2A /* Auth */,
 				AF9136BA2AED4D7300599359 /* SwipeView.swift */,
 			);
 			path = View;
@@ -146,6 +161,7 @@
 		AF9136B12AED3C3100599359 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA0AFE2AEE405900A8CD2A /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 			children = (
 				AF9136B62AED42DD00599359 /* User.swift */,
 				AF9136B82AED454A00599359 /* Card.swift */,
+				AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,15 +179,27 @@
 		AF9136B42AED3CE700599359 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */,
+				AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		AF9136B52AED3CFA00599359 /* Serivice */ = {
+		AF9136B52AED3CFA00599359 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA0B002AEE406600A8CD2A /* AuthService.swift */,
 			);
-			path = Serivice;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AFDA0AF92AEE3FBD00A8CD2A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA0AFA2AEE3FCA00A8CD2A /* LoginView.swift */,
+				AFDA0AFC2AEE3FDE00A8CD2A /* RegisterView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +294,7 @@
 			files = (
 				AF9136A92AECA2E300599359 /* Preview Assets.xcassets in Resources */,
 				AF9136A62AECA2E300599359 /* Assets.xcassets in Resources */,
-				AF9136BD2AEE320800599359 /* GoogleService-Info.plist in Resources */,
+				AFDA0B032AEE427A00A8CD2A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDA0B052AEE455600A8CD2A /* BrandingImage.swift in Sources */,
+				AFDA0AFB2AEE3FCA00A8CD2A /* LoginView.swift in Sources */,
 				AF9136A42AECA2E200599359 /* ContentView.swift in Sources */,
+				AFDA0B092AEE6B4B00A8CD2A /* Collections.swift in Sources */,
 				AF9136A22AECA2E200599359 /* TinderCloneApp.swift in Sources */,
+				AFDA0B072AEE485D00A8CD2A /* TinderInputField.swift in Sources */,
+				AFDA0B012AEE406600A8CD2A /* AuthService.swift in Sources */,
+				AFDA0AFD2AEE3FDE00A8CD2A /* RegisterView.swift in Sources */,
+				AFDA0AFF2AEE405900A8CD2A /* AuthViewModel.swift in Sources */,
 				AF9136B72AED42DD00599359 /* User.swift in Sources */,
 				AF9136B92AED454A00599359 /* Card.swift in Sources */,
 				AF9136BB2AED4D7300599359 /* SwipeView.swift in Sources */,
