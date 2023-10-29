@@ -45,4 +45,4 @@ iOSInjectionProject/
 assets/
 
 TinderClone.xcodeproj/
-GoogleService-Info.plist
+./GoogleService-Info.plist
