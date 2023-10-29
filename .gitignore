@@ -1,3 +1,5 @@
+GoogleService-Info.plist
+
 .DS_Store
 
 xcuserdata/
@@ -45,4 +47,3 @@ iOSInjectionProject/
 assets/
 
 TinderClone.xcodeproj/
-./GoogleService-Info.plist
