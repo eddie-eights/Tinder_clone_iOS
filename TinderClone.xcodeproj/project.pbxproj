@@ -49,6 +49,8 @@
 		AFDA0B052AEE455600A8CD2A /* BrandingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */; };
 		AFDA0B072AEE485D00A8CD2A /* TinderInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */; };
 		AFDA0B092AEE6B4B00A8CD2A /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */; };
+		AFDA0B0B2AEFFD8500A8CD2A /* LoadingOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B0A2AEFFD8500A8CD2A /* LoadingOverlayView.swift */; };
+		AFDA0B0D2AEFFEE200A8CD2A /* TinderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA0B0C2AEFFEE200A8CD2A /* TinderError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandingImage.swift; sourceTree = "<group>"; };
 		AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderInputField.swift; sourceTree = "<group>"; };
 		AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
+		AFDA0B0A2AEFFD8500A8CD2A /* LoadingOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlayView.swift; sourceTree = "<group>"; };
+		AFDA0B0C2AEFFEE200A8CD2A /* TinderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				AF9136B62AED42DD00599359 /* User.swift */,
 				AF9136B82AED454A00599359 /* Card.swift */,
 				AFDA0B082AEE6B4B00A8CD2A /* Collections.swift */,
+				AFDA0B0C2AEFFEE200A8CD2A /* TinderError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			children = (
 				AFDA0B042AEE455600A8CD2A /* BrandingImage.swift */,
 				AFDA0B062AEE485D00A8CD2A /* TinderInputField.swift */,
+				AFDA0B0A2AEFFD8500A8CD2A /* LoadingOverlayView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -306,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFDA0B052AEE455600A8CD2A /* BrandingImage.swift in Sources */,
+				AFDA0B0B2AEFFD8500A8CD2A /* LoadingOverlayView.swift in Sources */,
+				AFDA0B0D2AEFFEE200A8CD2A /* TinderError.swift in Sources */,
 				AFDA0AFB2AEE3FCA00A8CD2A /* LoginView.swift in Sources */,
 				AF9136A42AECA2E200599359 /* ContentView.swift in Sources */,
 				AFDA0B092AEE6B4B00A8CD2A /* Collections.swift in Sources */,

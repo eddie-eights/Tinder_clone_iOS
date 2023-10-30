@@ -7,9 +7,13 @@ class AuthService {
     static let shared = AuthService()
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var isLoading = false
+    @Published var errorEvent = TinderError(content: "", display: false)
     
     // ユーザー新規登録
+    @MainActor
     func register(withEmail email: String, name: String, password: String, onComplete: () -> ()) async {
+        isLoading = true
         do {
             // FireBase認証でユーザーを作成し認証情報を呼び出す
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
@@ -19,6 +23,7 @@ class AuthService {
             let uid = result.user.uid
             let user = User(id: uid, email: email, name: name)
             guard let encodedUser = try? Firestore.Encoder().encode(user) else {
+                isLoading = false
                 return
             }
             
@@ -30,6 +35,15 @@ class AuthService {
             
         } catch{
             print("DEBUG: ユーザー作成に失敗しました。 error: \(error.localizedDescription)")
+            errorEvent = TinderError(content: error.localizedDescription)
+            signout()
         }
+        isLoading = false
+    }
+    
+    func signout(){
+        userSession = nil
+        currentUser = nil
+        try? Auth.auth().signOut()
     }
 }
