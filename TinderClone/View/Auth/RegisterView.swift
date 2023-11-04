@@ -1,10 +1,3 @@
-//
-//  RegisterView.swift
-//  TinderClone
-//
-//  Created by 福田瑛斗 on 2023/10/29.
-//
-
 import SwiftUI
 
 struct RegisterView: View {
@@ -21,8 +14,7 @@ struct RegisterView: View {
             VStack{
                 BrandingImage()
                 Text("Welcome !")
-                    .font(.title)
-                    .bold()
+                    .font(.largeTitle)
                     .padding()
                 
                 VStack(spacing: 32) {

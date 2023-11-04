@@ -41,6 +41,24 @@ class AuthService {
         isLoading = false
     }
     
+    // ユーザーログイン
+    @MainActor
+    func login(withEmail email: String, password: String) async {
+        isLoading = true
+        do {
+            // FireBase認証でユーザーログインを実行
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            
+        } catch{
+            print("DEBUG: ログインに失敗しました。 error: \(error.localizedDescription)")
+            errorEvent = TinderError(content: error.localizedDescription)
+            signout()
+        }
+        isLoading = false
+    }
+    
+    
     func signout(){
         userSession = nil
         currentUser = nil
