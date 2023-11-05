@@ -7,15 +7,14 @@
 
 import Foundation
 
-
 struct Card: Identifiable, Hashable {
-    
+
     let id = UUID()
     let user: User
     var x: CGFloat = 0.0
     var y: CGFloat = 0.0
     var degree: CGFloat = 0.0
-    
+
     static var mockData: [Card] = [
         Card(user: User.mockUsers[0]),
         Card(user: User.mockUsers[1]),

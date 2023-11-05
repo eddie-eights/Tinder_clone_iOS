@@ -1,38 +1,41 @@
 import SwiftUI
 
 struct RegisterView: View {
-    
+    @State private var startRegistrationFlow = false
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
-    
+
     @State var email: String = ""
     @State var name: String = ""
     @State var password: String = ""
-    
+
     var body: some View {
         ZStack {
-            VStack{
+            VStack {
                 BrandingImage()
                 Text("Welcome !")
                     .font(.largeTitle)
                     .padding()
-                
+
                 VStack(spacing: 32) {
-                    TinderInputField(imageName: "envelope", placeholderText: "メールアドレス", text: $viewModel.email)
-                    TinderInputField(imageName: "person", placeholderText: "ユーザー名", text: $viewModel.name)
-                    TinderInputField(imageName: "lock", placeholderText: "パスワード", text: $viewModel.password)
+                    TinderInputField(
+                        imageName: "envelope", placeholderText: "メールアドレス", text: $viewModel.email)
+                    TinderInputField(
+                        imageName: "person", placeholderText: "ユーザー名", text: $viewModel.name)
+                    TinderInputField(
+                        imageName: "lock", placeholderText: "パスワード", text: $viewModel.password)
                 }
                 .padding(.horizontal, 32)
                 .padding(.vertical, 16)
-                
-                Button{
+
+                Button {
                     Task {
-                        try await viewModel.register(){
-                            
+                        try await viewModel.register {
+                            startRegistrationFlow.toggle()
                         }
                     }
-                    
-                }label: {
+
+                } label: {
                     Text("新規登録")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -43,12 +46,12 @@ struct RegisterView: View {
                 .shadow(color: .gray.opacity(0.5), radius: 10, x: 0, y: 0)
                 .padding(.horizontal, 32)
                 .padding(.vertical, 16)
-                
+
                 Spacer()
-                
-                Button{
+
+                Button {
                     dismiss()
-                }label:{
+                } label: {
                     Text("すでに登録されていますか？")
                         .font(.footnote)
                     Text("ログイン")
@@ -57,16 +60,23 @@ struct RegisterView: View {
                 }
                 .padding(.bottom, 48)
             }
-            
+
             // 新規ユーザー登録処理のあいだ、ローディング画面を表示
             if $viewModel.isLoading.wrappedValue {
                 LoadingOverlayView()
             }
         }
-        .alert(viewModel.errorEvent.content,
-               isPresented: $viewModel.errorEvent.display){
-            Button("OK", role: .cancel){}
+        .alert(
+            viewModel.errorEvent.content,
+            isPresented: $viewModel.errorEvent.display
+        ) {
+            Button("OK", role: .cancel) {}
         }
+        .navigationDestination(isPresented: $startRegistrationFlow) {
+            RegisterImageView()
+                .navigationBarBackButtonHidden()
+        }
+
     }
 }
 

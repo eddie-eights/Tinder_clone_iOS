@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct SwipeView: View {
-    
+
     let potentialCards: [Card] = Card.mockData
-    
+
     var body: some View {
-        VStack{
-            if(potentialCards.isEmpty){
+        VStack {
+            if potentialCards.isEmpty {
                 Spacer()
                 Text("表示可能なカードがありません")
                 Spacer()
-            }else{
-                ZStack{
-                    ForEach(potentialCards){ card in
+            } else {
+                ZStack {
+                    ForEach(potentialCards) { card in
                         CardView(card: card)
                     }
                 }
@@ -28,21 +28,19 @@ struct SwipeView: View {
     }
 }
 
-
 struct CardView: View {
-    
+
     @State var card: Card
-    
+
     // グラデーションのカラーを設定
     let cardGradient = Gradient(
         colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
-    
-    
+
     var body: some View {
-        VStack{
-            
+        VStack {
+
             // 画像
-            ZStack(alignment: .topLeading){
+            ZStack(alignment: .topLeading) {
                 // GeometryReader -> 画面のサイズを取得できる
                 GeometryReader(content: { geometry in
                     Image(card.user.profileImageUrl ?? "")
@@ -52,12 +50,12 @@ struct CardView: View {
                         .clipped()
                         .foregroundColor(.white)
                 })
-                
+
                 // 下に文字を表示するため黒のグラデーションを追加
                 LinearGradient(
                     gradient: cardGradient, startPoint: .top, endPoint: .bottom)
-                
-                VStack{
+
+                VStack {
                     Spacer()
                     HStack {
                         Text(card.user.name)
@@ -71,9 +69,9 @@ struct CardView: View {
                     .foregroundColor(.white)
                 }
                 .padding()
-                
+
                 // ドラッグした時の Nope / Like ラベル
-                HStack{
+                HStack {
                     Image("like")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -99,7 +97,7 @@ struct CardView: View {
                         withAnimation(.default) {
                             card.x = value.translation.width
                             card.y = value.translation.height
-                            card.degree = 7 * (value.translation.width > 0 ? 1 : -1 )
+                            card.degree = 7 * (value.translation.width > 0 ? 1 : -1)
                         }
                         withAnimation(
                             .interpolatingSpring(
@@ -128,53 +126,52 @@ struct CardView: View {
                         }
                     })
             )
-            
+
             // Nope / Like ボタン
-            HStack{
+            HStack {
                 Spacer()
-                
+
                 // Nopeボタン
-                Button{
+                Button {
                     withAnimation(
                         .interpolatingSpring(
                             mass: 1, stiffness: 50, damping: 5, initialVelocity: 0
                         )
-                    ){
+                    ) {
                         card.x = -1000
                         card.degree = -12
                     }
-                }label: {
+                } label: {
                     Image("dismiss_circle")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .background(.white)
                 }
-                
+
                 Spacer()
-                
+
                 // Likeボタン
-                Button{
+                Button {
                     withAnimation(
                         .interpolatingSpring(
                             mass: 1, stiffness: 50, damping: 5, initialVelocity: 0
                         )
-                    ){
+                    ) {
                         card.x = 1000
                         card.degree = 12
                     }
-                }label: {
+                } label: {
                     Image("like_circle")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .background(.white)
                 }
-                
+
                 Spacer()
             }
         }
     }
 }
-
 
 #Preview {
     SwipeView()

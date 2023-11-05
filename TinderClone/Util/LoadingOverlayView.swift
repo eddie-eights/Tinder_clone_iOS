@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoadingOverlayView: View {
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Spacer()
             }
             Spacer()

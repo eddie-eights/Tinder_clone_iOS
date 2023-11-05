@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BrandingImage: View {
-    
+
     var size: CGFloat = 150
-    
+
     var body: some View {
         Image("fire")
             .resizable()

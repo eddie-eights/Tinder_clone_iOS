@@ -1,15 +1,15 @@
-import SwiftUI
 import Firebase
+import SwiftUI
 
 @main
 struct TinderCloneApp: App {
     // アプリケーション全体で使えるようにインスタンス生成
     @StateObject var viewModel = AuthViewModel()
-    
-    init(){
+
+    init() {
         FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
